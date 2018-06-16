@@ -1,17 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInputController : MonoBehaviour
 {
+    [SerializeField] public GameObject spell;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(spell, transform.position, transform.rotation);
+            int x = UnityEngine.Random.Range(0, 20);
+            Debug.Log(x);
+        }
+    }
 }

@@ -2,36 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class SpellMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] private float _maxSpeed;
-
-    private void FixedUpdate()
-    {
-        float axis = Input.GetAxisRaw("Vertical");
-        Vector2 velocity = new Vector2(0, (_maxSpeed * axis));
-        _rigidbody.velocity = velocity;
-
-    }
 
     private void Update()
     {
         float camDistance = Vector3.Distance(transform.position, Camera.main.transform.position);
         Vector2 bottomCorner = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, camDistance));
         Vector2 topCorner = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, camDistance));
-        Vector2 pos = transform.position;
 
-        if(transform.position.y <bottomCorner.y)
+        Vector2 velocity = new Vector2(_maxSpeed, 0);
+        _rigidbody.velocity = velocity;
+
+        if(transform.position.x < bottomCorner.x)
         {
-            pos.y = bottomCorner.y;
+            Destroy(gameObject);
         }
 
-        if(transform.position.y > topCorner.y)
+        if(transform.position.x > topCorner.x)
         {
-            pos.y = topCorner.y;
+            Destroy(gameObject);
         }
-
-        transform.position = pos;
     }
 }
