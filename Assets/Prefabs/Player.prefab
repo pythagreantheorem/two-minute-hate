@@ -20,10 +20,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4409232989892590}
   - component: {fileID: 50865587540493188}
+  - component: {fileID: 61364445342010806}
   - component: {fileID: 212464120595572520}
   - component: {fileID: 114830717242092498}
   - component: {fileID: 114219831138432320}
   - component: {fileID: 114839172846979304}
+  - component: {fileID: 114993665990562878}
+  - component: {fileID: 114437031863354094}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -62,8 +65,33 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 5
+--- !u!61 &61364445342010806
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079827781264434}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!114 &114219831138432320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,7 +103,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe2061af49660d48a96ce43b9576576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _actionController: {fileID: 114437031863354094}
+--- !u!114 &114437031863354094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079827781264434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 425e7a48f7ed3174db58f75fef3bbb53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   spell: {fileID: 1981197741345308, guid: 653a042bed5055843a67834c2b25b95e, type: 2}
+  canFire: 1
 --- !u!114 &114830717242092498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,9 +141,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5aad6d7aa6bb54f994890869dcd5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _secsmin: 2
-  _secsmax: 7
+  _secsmin: 3
+  _secsmax: 6
   enemy: {fileID: 1142515394644918, guid: a8e57db3675ed9b40856bed49561f0e7, type: 2}
+--- !u!114 &114993665990562878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079827781264434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97f367f04ec6fb41813ce3c6460e6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLives: 5
 --- !u!212 &212464120595572520
 SpriteRenderer:
   m_ObjectHideFlags: 1

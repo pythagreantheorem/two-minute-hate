@@ -22,6 +22,9 @@ GameObject:
   - component: {fileID: 50843629751657844}
   - component: {fileID: 212541066911579030}
   - component: {fileID: 114336909127900916}
+  - component: {fileID: 114164755383414892}
+  - component: {fileID: 61301386759067064}
+  - component: {fileID: 114456182384324034}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -62,6 +65,43 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61301386759067064
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142515394644918}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
+--- !u!114 &114164755383414892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142515394644918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 648fa109cd4573f4fb37900b510d6e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: {fileID: 1680338845659112, guid: da318d3658be1f1469a7edf8a2de7ee8, type: 2}
 --- !u!114 &114336909127900916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,6 +115,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 50843629751657844}
   _maxSpeed: 1.5
+--- !u!114 &114456182384324034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142515394644918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1ee3abcbc0e914287f92f10a67d54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLives: 2
 --- !u!212 &212541066911579030
 SpriteRenderer:
   m_ObjectHideFlags: 1
