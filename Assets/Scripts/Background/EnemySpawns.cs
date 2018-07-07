@@ -13,13 +13,13 @@ public class EnemySpawns : MonoBehaviour {
         StartCoroutine("Spawning");
     }
 
-    IEnumerator Spawning()
+    private IEnumerator Spawning()
     {
         for (int i = 0; i < 100; i++)
         {
-            Vector3 pos = new Vector3(-7, UnityEngine.Random.Range(-3.44f, 3.62f), 0.2f);
-            yield return new WaitForSeconds(UnityEngine.Random.Range(_secsmin, _secsmax));
+            Vector3 pos = new Vector3(-6, UnityEngine.Random.Range(-3.44f, 3.62f), 0);
             Instantiate(enemy, pos, transform.rotation);
+            yield return new WaitForSeconds(UnityEngine.Random.Range(_secsmin, _secsmax));
         }
     }
 }
