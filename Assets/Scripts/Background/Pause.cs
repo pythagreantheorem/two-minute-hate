@@ -8,25 +8,14 @@ public class Pause : MonoBehaviour
 
     public void StopGame()
     {
-        SpellMovement instEsp = GameObject.FindGameObjectWithTag("Enemy").GetComponent<SpellMovement>();
-        PlayerMovement instPm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        SpellMovement instWsp = GameObject.FindGameObjectWithTag("Waterball").GetComponent<SpellMovement>();
-        SpellMovement instFsp = GameObject.FindGameObjectWithTag("Fireball").GetComponent<SpellMovement>();
-
         if (paused)
         {
-            instEsp.maxSpeed = 2;
-            instFsp.maxSpeed = -4;
-            instPm._maxSpeed = 4;
-            instWsp.maxSpeed = 4;
+            Time.timeScale = 1;
+            paused = false;
         }
         else
         {
-            instEsp.maxSpeed = 0;
-            instFsp.maxSpeed = 0;
-            instPm._maxSpeed = 0;
-            instWsp.maxSpeed = 0;
-
+            Time.timeScale = 0;
             paused = true;
         }
     }

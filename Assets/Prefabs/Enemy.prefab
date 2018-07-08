@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114164755383414892}
   - component: {fileID: 61301386759067064}
   - component: {fileID: 114456182384324034}
+  - component: {fileID: 114691356728392756}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -127,6 +128,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLives: 1
+  backgroundrunner: {fileID: 0}
+--- !u!114 &114691356728392756
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1142515394644918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a1b4a97eebe744fa24c8baf1c73fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killcount: 0
 --- !u!212 &212541066911579030
 SpriteRenderer:
   m_ObjectHideFlags: 1

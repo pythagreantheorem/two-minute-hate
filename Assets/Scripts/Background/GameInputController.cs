@@ -8,15 +8,10 @@ public class GameInputController : MonoBehaviour
     [SerializeField] private Restart _restart;
     [SerializeField] private GameObject player;
 
-    private void Start()
-    {
-       // _pause.ResetSpeed();
-    }
     void Update ()
     {
         if (Input.GetButtonDown("Pause"))
         {
-            Debug.Log("Totally pausing.");
             _pause.StopGame();
         }
 
