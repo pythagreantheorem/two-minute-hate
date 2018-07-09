@@ -1,20 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SwitchingScenes : MonoBehaviour
 {
-    [SerializeField] private int killcount;
+    public int killcount;
+    [SerializeField] private GoldDisplay _goldDisplay;
 
     public void AddKill()
     {
         killcount = killcount + 1;
-        Debug.Log(killcount);
         CheckLevelSwitch(killcount);
+        _goldDisplay.DisplayGold(killcount);
     }
 
     private void CheckLevelSwitch(int _killcount)
     {
-        Debug.Log("Checked");
+        switch(_killcount)
+        {
+            case 5:
+                SceneManager.LoadScene("SampleScene");
+            break;
+        }
+
     }
 }

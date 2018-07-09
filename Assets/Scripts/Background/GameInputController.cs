@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameInputController : MonoBehaviour
 {
@@ -8,8 +9,11 @@ public class GameInputController : MonoBehaviour
     [SerializeField] private Restart _restart;
     [SerializeField] private GameObject player;
 
-    void Update ()
+    void Update()
     {
+        float camDistance = Vector3.Distance(transform.position, Camera.main.transform.position);
+        Vector2 topCorner = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, camDistance));
+
         if (Input.GetButtonDown("Pause"))
         {
             _pause.StopGame();
@@ -18,7 +22,8 @@ public class GameInputController : MonoBehaviour
         if (GameObject.Find("Player") == null && GameObject.Find("Player(Clone)") == null)
         {
             Vector3 pos = transform.position;
-            pos.x = 5;
+            pos.x = topCorner.x;
+            pos.x = pos.x - 1;
             Instantiate(player, pos, transform.rotation);
         }
     }

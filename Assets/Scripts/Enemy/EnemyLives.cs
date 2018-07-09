@@ -11,13 +11,12 @@ public class EnemyLives : MonoBehaviour {
     {
         if (other.name.Contains("Fireball"))
         {
-            GameObject backgroundrunner = GameObject.Find("BackgroundRunning");
-            SwitchingScenes switchscr = backgroundrunner.GetComponent<SwitchingScenes>();
+            SwitchingScenes switchscript = backgroundrunner.GetComponent<SwitchingScenes>();
 
             Destroy(other.gameObject);
             maxLives--;
 
-            switchscr.AddKill();
+           switchscript.AddKill();
 
             if (maxLives == 0)
             {

@@ -128,7 +128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLives: 1
-  backgroundrunner: {fileID: 0}
+  backgroundrunner: {fileID: 1549497332955546, guid: bc5504fc526017e488135a7db363c9d3,
+    type: 2}
 --- !u!114 &114691356728392756
 MonoBehaviour:
   m_ObjectHideFlags: 1
