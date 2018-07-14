@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 50843629751657844}
   maxSpeed: 2
+  waterparticles: {fileID: 0}
 --- !u!114 &114456182384324034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killcount: 0
+  _goldDisplay: {fileID: 0}
 --- !u!212 &212541066911579030
 SpriteRenderer:
   m_ObjectHideFlags: 1

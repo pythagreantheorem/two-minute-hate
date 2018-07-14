@@ -9,7 +9,9 @@ public class GoldDisplay : MonoBehaviour
 
     public void DisplayGold(int goldcount)
     {
-        string newtxt = "Gold:" + goldcount.ToString();
-        Debug.Log(newtxt);
+        string goldamount = goldcount.ToString();
+        Debug.Log(goldamount);
+        string newtxt = "Gold:" + goldamount;
+        //txt.text = newtxt;
     }
 }

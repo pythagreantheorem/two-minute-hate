@@ -91,6 +91,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 50846680710358056}
   maxSpeed: 4
+  waterparticles: {fileID: 1201640845735592, guid: ce1570f5db534ca4183726ecb9794462,
+    type: 2}
+  fireparticles: {fileID: 1417468556107474, guid: 2f6fc104633edc14b9f354e10fb77942,
+    type: 2}
 --- !u!212 &212923621789250574
 SpriteRenderer:
   m_ObjectHideFlags: 1

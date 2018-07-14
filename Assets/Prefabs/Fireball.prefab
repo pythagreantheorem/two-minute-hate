@@ -92,6 +92,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 50571382906101020}
   maxSpeed: -4
+  waterparticles: {fileID: 1201640845735592, guid: ce1570f5db534ca4183726ecb9794462,
+    type: 2}
 --- !u!114 &114798607419355358
 MonoBehaviour:
   m_ObjectHideFlags: 1

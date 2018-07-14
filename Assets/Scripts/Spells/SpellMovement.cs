@@ -6,6 +6,8 @@ public class SpellMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] public float maxSpeed;
+    [SerializeField] private GameObject waterparticles;
+    [SerializeField] private GameObject fireparticles;
 
     private void Update()
     {
@@ -25,23 +27,15 @@ public class SpellMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
 
-    public void ResetMaxSpeed()
-    {
-        if (this.name.Contains("Enemy"))
+        if (this.name == "Fireball(Clone)")
         {
-            maxSpeed = 2;
+            Instantiate(waterparticles, transform.position, transform.rotation);
         }
-
-        if (this.name.Contains("Fireball"))
+        
+        if (this.name == "Waterball(Clone)")
         {
-            maxSpeed = -4;
-        }
-
-        if (this.name.Contains("Waterball"))
-        {
-            maxSpeed = 4;
+            Instantiate(fireparticles, transform.position, transform.rotation);
         }
     }
 }

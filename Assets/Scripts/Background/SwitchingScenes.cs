@@ -8,6 +8,10 @@ public class SwitchingScenes : MonoBehaviour
     public int killcount;
     [SerializeField] private GoldDisplay _goldDisplay;
 
+    private void Start()
+    {
+        killcount = 0;
+    }
     public void AddKill()
     {
         killcount = killcount + 1;
@@ -20,7 +24,8 @@ public class SwitchingScenes : MonoBehaviour
         switch(_killcount)
         {
             case 5:
-                SceneManager.LoadScene("SampleScene");
+
+                //SceneManager.LoadScene("SampleScene");
             break;
         }
 
