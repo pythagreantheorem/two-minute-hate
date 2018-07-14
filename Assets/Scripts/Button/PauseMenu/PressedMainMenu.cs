@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PressedHowTo : MonoBehaviour
+public class PressedMainMenu : MonoBehaviour
 {
     public void ButtonClick()
     {
         GameObject.Find("LevelRunning").GetComponent<Pause>().StopGame();
-        SceneManager.LoadScene("HowTo1");
+        SceneManager.LoadScene("Title Screen");
     }
 }

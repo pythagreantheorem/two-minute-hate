@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PressedHowTo : MonoBehaviour
+public class Unpause : MonoBehaviour
 {
-    public void ButtonClick()
+
+    public void StopPausing()
     {
         GameObject.Find("LevelRunning").GetComponent<Pause>().StopGame();
-        SceneManager.LoadScene("HowTo1");
     }
 }

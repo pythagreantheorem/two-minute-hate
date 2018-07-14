@@ -9,8 +9,10 @@ public class SpellMovement : MonoBehaviour
     [SerializeField] private GameObject waterparticles;
     [SerializeField] private GameObject fireparticles;
 
+
     private void Update()
     {
+        //Setting up the variables
         float camDistance = Vector3.Distance(transform.position, Camera.main.transform.position);
         Vector2 bottomCorner = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, camDistance));
         Vector2 topCorner = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, camDistance));
@@ -18,6 +20,9 @@ public class SpellMovement : MonoBehaviour
         Vector2 velocity = new Vector2(maxSpeed, 0);
         _rigidbody.velocity = velocity;
 
+        Pause _pause = GameObject.Find("LevelRunning").GetComponent<Pause>();
+
+        //Destroying objects offscreen
         if (transform.position.x < bottomCorner.x)
         {
             Destroy(gameObject);
@@ -28,14 +33,18 @@ public class SpellMovement : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (this.name == "Fireball(Clone)")
+        //Particle effects for projectiles
+        if (_pause.paused != true)
         {
-            Instantiate(waterparticles, transform.position, transform.rotation);
-        }
-        
-        if (this.name == "Waterball(Clone)")
-        {
-            Instantiate(fireparticles, transform.position, transform.rotation);
+            if (this.name == "Fireball(Clone)")
+            {
+                Instantiate(waterparticles, transform.position, transform.rotation);
+            }
+
+            if (this.name == "Waterball(Clone)")
+            {
+                Instantiate(fireparticles, transform.position, transform.rotation);
+            }
         }
     }
 }

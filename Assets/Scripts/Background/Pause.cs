@@ -13,15 +13,15 @@ public class Pause : MonoBehaviour
         if (paused)
         {
             Time.timeScale = 1;
-            paused = false;
             GameObject shadowedbg = GameObject.Find("DarkneningPause(Clone)");
             Destroy(shadowedbg);
+            paused = false;
         }
         else
         {
             Time.timeScale = 0;
-            paused = true;
             Instantiate(darkbackground, transform.position, transform.rotation);
+            paused = true;
         }
 
         _pausemenucreate.Menu(paused);

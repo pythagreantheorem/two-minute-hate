@@ -3,7 +3,14 @@ guid: 6c75e7a5e7fa48046b02cf86386316ad
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - canvas: {instanceID: 0}
+  - resumebut: {fileID: 1064679075171400, guid: d57208f4bb919d743942b7ac176d4a60,
+      type: 2}
+  - shopbut: {fileID: 1392932519822656, guid: 3b5521cd553e62d4e9b1b9367210e652, type: 2}
+  - mainmenubut: {fileID: 1950849146697554, guid: 53ad908d7530e8243afe5af86dfab2a3,
+      type: 2}
+  - howtobut: {fileID: 1697000980324194, guid: 05d8d4a1ea7d92445a6f17631d5f36d3, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

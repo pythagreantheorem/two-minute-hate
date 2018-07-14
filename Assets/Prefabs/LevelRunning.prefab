@@ -27,7 +27,6 @@ GameObject:
   - component: {fileID: 114687902039840796}
   - component: {fileID: 114343081683271568}
   - component: {fileID: 114935663116278324}
-  - component: {fileID: 114308746308208934}
   m_Layer: 0
   m_Name: LevelRunning
   m_TagString: Untagged
@@ -91,25 +90,13 @@ MonoBehaviour:
   _pause: {fileID: 114038594224458164}
   _restart: {fileID: 114310937154837776}
   player: {fileID: 1079827781264434, guid: fcee64cf88f9d3f4faa3ca35236622e0, type: 2}
---- !u!114 &114308746308208934
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1549497332955546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 901d15b679d7e99438caa750ffed7d07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txt: {fileID: 0}
 --- !u!114 &114310937154837776
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549497332955546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f1c6eb1a070bb64c8c67e5f4df9261f, type: 3}
   m_Name: 
@@ -125,11 +112,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c75e7a5e7fa48046b02cf86386316ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resumebut: {fileID: 1515187945129056, guid: 7d56b6660a444dc49a5be7a121667615, type: 2}
-  shopbut: {fileID: 1381003122328822, guid: f630882c2c3ab5a4e88e5f2176a469f5, type: 2}
-  mainmenubut: {fileID: 1163406008068350, guid: ec2e940ec138740489b6dda02e491d81,
+  canvas: {fileID: 0}
+  resumebut: {fileID: 1064679075171400, guid: d57208f4bb919d743942b7ac176d4a60, type: 2}
+  shopbut: {fileID: 1392932519822656, guid: 3b5521cd553e62d4e9b1b9367210e652, type: 2}
+  mainmenubut: {fileID: 1950849146697554, guid: 53ad908d7530e8243afe5af86dfab2a3,
     type: 2}
-  howtobut: {fileID: 1241839733385398, guid: d56525d817c2f0d4ca3e1f564940884f, type: 2}
+  howtobut: {fileID: 1697000980324194, guid: 05d8d4a1ea7d92445a6f17631d5f36d3, type: 2}
 --- !u!114 &114687902039840796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a1b4a97eebe744fa24c8baf1c73fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killcount: 18
-  _goldDisplay: {fileID: 114308746308208934}
+  killcount: 1
+  _goldDisplay: {fileID: 114935663116278324}
 --- !u!114 &114935663116278324
 MonoBehaviour:
   m_ObjectHideFlags: 1
