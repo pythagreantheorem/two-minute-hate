@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class SwitchingScenes : MonoBehaviour
 {
     public int killcount;
-    [SerializeField] private GoldDisplay _goldDisplay;
 
     private void Start()
     {
@@ -16,7 +15,7 @@ public class SwitchingScenes : MonoBehaviour
     {
         killcount = killcount + 1;
         CheckLevelSwitch(killcount);
-        _goldDisplay.DisplayGold(killcount);
+        Debug.Log(killcount);
     }
 
     private void CheckLevelSwitch(int _killcount)

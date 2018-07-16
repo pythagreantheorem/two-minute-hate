@@ -26,7 +26,7 @@ public class PauseMenuCreation : MonoBehaviour
             Destroy(GameObject.Find("ResumeBut(Clone)"));
             Destroy(GameObject.Find("ShopBut(Clone)"));
             Destroy(GameObject.Find("MainMenuBut(Clone)"));
-            Destroy(GameObject.Find("HowToBut(Clone)"));
+            Destroy(GameObject.Find("HowToPlayButton(Clone)"));
         }
     }
 }

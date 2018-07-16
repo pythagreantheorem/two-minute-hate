@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114549176019777920}
   - component: {fileID: 114967441357853040}
   - component: {fileID: 114609671371149760}
+  - component: {fileID: 114091656516745236}
   m_Layer: 0
   m_Name: ButtonRunner
   m_TagString: Untagged
@@ -53,6 +54,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddd8fd7f6599e2143a2e5f2c1e87462f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114091656516745236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1399426209216118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754eedd06cf074e46a2554df5daeef45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114549176019777920

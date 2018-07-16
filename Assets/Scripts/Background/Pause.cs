@@ -13,8 +13,7 @@ public class Pause : MonoBehaviour
         if (paused)
         {
             Time.timeScale = 1;
-            GameObject shadowedbg = GameObject.Find("DarkneningPause(Clone)");
-            Destroy(shadowedbg);
+            Destroy(GameObject.Find("DarkneningPause(Clone)"));
             paused = false;
         }
         else

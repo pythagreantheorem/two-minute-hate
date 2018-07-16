@@ -7,7 +7,10 @@ public class PressedHowTo : MonoBehaviour
 {
     public void ButtonClick()
     {
-        GameObject.Find("LevelRunning").GetComponent<Pause>().StopGame();
+        if (SceneManager.GetActiveScene().name != "Title Screen")
+        {
+            GameObject.Find("LevelRunning").GetComponent<Pause>().StopGame();
+        }
         SceneManager.LoadScene("HowTo1");
     }
 }

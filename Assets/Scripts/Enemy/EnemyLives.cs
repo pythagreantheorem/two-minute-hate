@@ -5,18 +5,15 @@ using UnityEngine;
 public class EnemyLives : MonoBehaviour {
 
     [SerializeField] public int maxLives;
-    [SerializeField] public GameObject backgroundrunner;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.name.Contains("Fireball"))
         {
-            SwitchingScenes switchscript = backgroundrunner.GetComponent<SwitchingScenes>();
-
             Destroy(other.gameObject);
             maxLives--;
 
-           switchscript.AddKill();
+            GameObject.Find("LevelRunning").GetComponent<SwitchingScenes>().AddKill();
 
             if (maxLives == 0)
             {
