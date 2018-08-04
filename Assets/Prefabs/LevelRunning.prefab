@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114343081683271568}
   - component: {fileID: 114935663116278324}
   - component: {fileID: 114403723491573824}
+  - component: {fileID: 114044770203709290}
   m_Layer: 0
   m_Name: LevelRunning
   m_TagString: Untagged
@@ -58,10 +59,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe80838409ae2c4c8a338d42d3a34da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paused: 0
+  paused: 1
   darkbackground: {fileID: 1562470877130078, guid: ce31bbd6b5fe3af44a09d09fc482bb8d,
     type: 2}
   _pausemenucreate: {fileID: 114343081683271568}
+--- !u!114 &114044770203709290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549497332955546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227be53865e99914bbfe00d4a127a4a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114168431467265058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pause: {fileID: 114038594224458164}
   _restart: {fileID: 114310937154837776}
-  player: {fileID: 1079827781264434, guid: fcee64cf88f9d3f4faa3ca35236622e0, type: 2}
 --- !u!114 &114310937154837776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1c6eb1a070bb64c8c67e5f4df9261f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1079827781264434, guid: fcee64cf88f9d3f4faa3ca35236622e0, type: 2}
 --- !u!114 &114343081683271568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,12 +143,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shopOpen: 0
   pausemenucreate: {fileID: 114343081683271568}
+  _golddisplaycs: {fileID: 114935663116278324}
   canvas: {fileID: 0}
   _shopHeader: {fileID: 1630172262745490, guid: 6b44629f779ac7c46ad1c9d375cccad9,
     type: 2}
   _spellDropdown: {fileID: 1538175344215154, guid: a58642860cca31746ae240ea1c4eae6d,
     type: 2}
   exitbutton: {fileID: 1265923826255972, guid: c385728986a67e34bb28a6df215f16e7, type: 2}
+  golddisplay: {fileID: 1098163748334614, guid: b6c57d1a383556940834ca8167ed0d56,
+    type: 2}
+  buybutton: {fileID: 1290334426978006, guid: acf9df5a1aad1864ba52114ae0eae8f5, type: 2}
 --- !u!114 &114687902039840796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a1b4a97eebe744fa24c8baf1c73fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killcount: 2
+  killcount: 0
 --- !u!114 &114935663116278324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,4 +176,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901d15b679d7e99438caa750ffed7d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt: {fileID: 0}
+  goldamount: 0
+  txt: {fileID: 114456124174736996, guid: b6c57d1a383556940834ca8167ed0d56, type: 2}

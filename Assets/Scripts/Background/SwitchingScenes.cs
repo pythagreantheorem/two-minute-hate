@@ -15,7 +15,7 @@ public class SwitchingScenes : MonoBehaviour
     {
         killcount = killcount + 1;
         CheckLevelSwitch(killcount);
-        Debug.Log(killcount);
+        this.GetComponent<GoldDisplay>().AddGold();
     }
 
     private void CheckLevelSwitch(int _killcount)

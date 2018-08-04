@@ -7,7 +7,6 @@ public class GameInputController : MonoBehaviour
 {
     [SerializeField] private Pause _pause;
     [SerializeField] private Restart _restart;
-    [SerializeField] private GameObject player;
 
     void Update()
     {
@@ -21,10 +20,7 @@ public class GameInputController : MonoBehaviour
 
         if (GameObject.Find("Player") == null && GameObject.Find("Player(Clone)") == null)
         {
-            Vector3 pos = transform.position;
-            pos.x = topCorner.x;
-            pos.x = pos.x - 1;
-            Instantiate(player, pos, transform.rotation);
+            _restart.Respawn();
         }
     }
 }

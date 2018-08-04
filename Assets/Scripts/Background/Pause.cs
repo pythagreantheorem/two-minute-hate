@@ -25,4 +25,9 @@ public class Pause : MonoBehaviour
 
         _pausemenucreate.Menu(paused);
     }
+
+    private void Start()
+    {
+        paused = false;
+    }
 }
