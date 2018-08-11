@@ -21,12 +21,11 @@ GameObject:
   - component: {fileID: 4413717617181814}
   - component: {fileID: 212779477051740484}
   - component: {fileID: 50571382906101020}
-  - component: {fileID: 114002093694298954}
   - component: {fileID: 58044875290337326}
-  - component: {fileID: 114798607419355358}
+  - component: {fileID: 114205016157862478}
   m_Layer: 0
   m_Name: Fireball
-  m_TagString: Fireball
+  m_TagString: PlayerSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &114002093694298954
+--- !u!114 &114205016157862478
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -87,24 +86,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1981197741345308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 595ae4fae5dba8c408fe1f8f1729ff5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 65fabd388e153c5408bee2834aabe49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 50571382906101020}
   maxSpeed: -4
   waterparticles: {fileID: 1201640845735592, guid: ce1570f5db534ca4183726ecb9794462,
     type: 2}
---- !u!114 &114798607419355358
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1981197741345308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8af87b18c0b617e4ba1e12cfd47bf483, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  waterballsp: {fileID: 1981197741345308}
 --- !u!212 &212779477051740484
 SpriteRenderer:
   m_ObjectHideFlags: 1

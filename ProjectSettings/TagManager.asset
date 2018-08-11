@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Fireball
-  - Waterball
+  - PlayerSpell
+  - EnemySpell
   layers:
   - Default
   - TransparentFX

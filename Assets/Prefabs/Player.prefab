@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114219831138432320}
   - component: {fileID: 114993665990562878}
   - component: {fileID: 114437031863354094}
+  - component: {fileID: 114877144107957552}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -115,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spell: {fileID: 1981197741345308, guid: 653a042bed5055843a67834c2b25b95e, type: 2}
+  _toolbox: {fileID: 114877144107957552}
   canFire: 1
 --- !u!114 &114830717242092498
 MonoBehaviour:
@@ -129,6 +131,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 50865587540493188}
   _maxSpeed: 4
+--- !u!114 &114877144107957552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079827781264434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8bae3b00260004ab68f6f24635fbd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spells:
+  - {fileID: 114205016157862478, guid: 653a042bed5055843a67834c2b25b95e, type: 2}
+  - {fileID: 114293248238245876, guid: 4d36f1f8f522e34429267042ecaabfa7, type: 2}
 --- !u!114 &114993665990562878
 MonoBehaviour:
   m_ObjectHideFlags: 1

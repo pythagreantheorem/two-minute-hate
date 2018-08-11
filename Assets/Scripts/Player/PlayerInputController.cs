@@ -13,5 +13,10 @@ public class PlayerInputController : MonoBehaviour
         {
             _actionController.UseEquippedSpell();
         }
+
+        if (Input.GetButtonDown("Change Spell"))
+        {
+            _actionController.EquipNextSpell();
+        }
     }
 }

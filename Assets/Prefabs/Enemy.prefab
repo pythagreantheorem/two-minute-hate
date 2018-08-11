@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4479825139571002}
   - component: {fileID: 50843629751657844}
   - component: {fileID: 212541066911579030}
-  - component: {fileID: 114336909127900916}
   - component: {fileID: 114164755383414892}
   - component: {fileID: 61301386759067064}
   - component: {fileID: 114456182384324034}
@@ -103,20 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spell: {fileID: 1680338845659112, guid: da318d3658be1f1469a7edf8a2de7ee8, type: 2}
---- !u!114 &114336909127900916
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1142515394644918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 595ae4fae5dba8c408fe1f8f1729ff5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 50843629751657844}
-  maxSpeed: 2
-  waterparticles: {fileID: 0}
 --- !u!114 &114456182384324034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,9 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1ee3abcbc0e914287f92f10a67d54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLives: 1
-  backgroundrunner: {fileID: 1549497332955546, guid: bc5504fc526017e488135a7db363c9d3,
-    type: 2}
+  maxLives: 2
+  _rigidbody: {fileID: 50843629751657844}
+  maxSpeed: 2
 --- !u!114 &114691356728392756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,7 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   killcount: 0
-  _goldDisplay: {fileID: 0}
 --- !u!212 &212541066911579030
 SpriteRenderer:
   m_ObjectHideFlags: 1

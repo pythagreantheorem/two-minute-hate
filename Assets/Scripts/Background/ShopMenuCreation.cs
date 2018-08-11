@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopMenuCreation : MonoBehaviour
 {
-    [SerializeField] public bool _shopOpen;
+    public bool _shopOpen;
     [SerializeField] private PauseMenuCreation pausemenucreate;
     [SerializeField] private GoldDisplay _golddisplaycs;
     [SerializeField] private GameObject canvas;
     [SerializeField] private GameObject _shopHeader;
-    [SerializeField] private GameObject _spellDropdown;
+    [SerializeField] private Dropdown _spellDropdown;
     [SerializeField] private GameObject exitbutton;
     [SerializeField] private GameObject golddisplay;
-    [SerializeField] private GameObject buybutton;
+    [SerializeField] private Button buybutton;
 
     public void CreateDestroyPauseMenu()
     {

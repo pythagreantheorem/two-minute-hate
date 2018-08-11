@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 65fabd388e153c5408bee2834aabe49d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _rigidbody: {fileID: 50571382906101020, guid: 653a042bed5055843a67834c2b25b95e,
+      type: 2}
+  - waterparticles: {fileID: 1201640845735592, guid: ce1570f5db534ca4183726ecb9794462,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

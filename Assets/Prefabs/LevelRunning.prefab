@@ -147,12 +147,13 @@ MonoBehaviour:
   canvas: {fileID: 0}
   _shopHeader: {fileID: 1630172262745490, guid: 6b44629f779ac7c46ad1c9d375cccad9,
     type: 2}
-  _spellDropdown: {fileID: 1538175344215154, guid: a58642860cca31746ae240ea1c4eae6d,
+  _spellDropdown: {fileID: 114454906788111760, guid: a58642860cca31746ae240ea1c4eae6d,
     type: 2}
   exitbutton: {fileID: 1265923826255972, guid: c385728986a67e34bb28a6df215f16e7, type: 2}
   golddisplay: {fileID: 1098163748334614, guid: b6c57d1a383556940834ca8167ed0d56,
     type: 2}
-  buybutton: {fileID: 1290334426978006, guid: acf9df5a1aad1864ba52114ae0eae8f5, type: 2}
+  buybutton: {fileID: 114824541542434938, guid: acf9df5a1aad1864ba52114ae0eae8f5,
+    type: 2}
 --- !u!114 &114687902039840796
 MonoBehaviour:
   m_ObjectHideFlags: 1
