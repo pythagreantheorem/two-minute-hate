@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97f367f04ec6fb41813ce3c6460e6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLives: 5
+  maxLives: 3
 --- !u!212 &212464120595572520
 SpriteRenderer:
   m_ObjectHideFlags: 1

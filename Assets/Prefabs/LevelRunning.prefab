@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17391352561a70b4290d5ae4be36e215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1079827781264434, guid: fcee64cf88f9d3f4faa3ca35236622e0, type: 2}
   _pause: {fileID: 114038594224458164}
-  _restart: {fileID: 114310937154837776}
 --- !u!114 &114310937154837776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyspwn: {fileID: 114168431467265058}
   killcount: 0
+  gameoverdisp: {fileID: 0}
 --- !u!114 &114935663116278324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,3 +181,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldamount: 0
   txt: {fileID: 114456124174736996, guid: b6c57d1a383556940834ca8167ed0d56, type: 2}
+  gameoverdisp: {fileID: 0}

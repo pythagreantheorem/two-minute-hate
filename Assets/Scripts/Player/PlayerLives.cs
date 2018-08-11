@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLives : MonoBehaviour
 {
@@ -12,16 +13,24 @@ public class PlayerLives : MonoBehaviour
         {
             Destroy(other.gameObject);
             maxLives--;
-
-            if(maxLives == 0)
-            {
-                Destroy(gameObject);
-            }
+            CheckIfDead();
         }
 
         if(other.name.Contains("Enemy"))
         {
-            Destroy(gameObject);
+            Destroy(other.gameObject);
+            maxLives--;
+            maxLives--;
+            CheckIfDead();
+        }
+    }
+
+    private void CheckIfDead()
+    {
+        if(maxLives <= 0)
+        {
+            Destroy(this.gameObject);
+            SceneManager.LoadScene("GameOver");
         }
     }
 

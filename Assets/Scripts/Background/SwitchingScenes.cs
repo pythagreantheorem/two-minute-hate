@@ -7,16 +7,21 @@ public class SwitchingScenes : MonoBehaviour
 {
     [SerializeField] private EnemySpawns enemyspwn;
     public int killcount;
+    [SerializeField] private Display gameoverdisp;
 
     private void Start()
     {
-        killcount = 0;
+        if(SceneManager.GetActiveScene().name == "1")
+        {
+            killcount = 0;
+        }
     }
     public void AddKill()
     {
         killcount = killcount + 1;
         CheckLevelSwitch(killcount);
         this.GetComponent<GoldDisplay>().AddGold();
+        gameoverdisp.addKill(killcount);
     }
 
     private void CheckLevelSwitch(int _killcount)

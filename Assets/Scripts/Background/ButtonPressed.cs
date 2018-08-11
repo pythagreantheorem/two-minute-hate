@@ -36,6 +36,11 @@ public class ButtonPressed : MonoBehaviour
         GameObject.Find("LevelRunning").GetComponent<Pause>().StopGame();
     }
 
+    public void GameOverMainMenu()
+    {
+        SceneManager.LoadScene("Title Screen");
+    }
+
     //Shop Menu Buttons
     public void BuyItems()
     {

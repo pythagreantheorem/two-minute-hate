@@ -5,8 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class GameInputController : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
     [SerializeField] private Pause _pause;
-    [SerializeField] private Restart _restart;
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "1")
+        {
+            float camDistance = Vector3.Distance(transform.position, Camera.main.transform.position);
+            Vector2 topCorner = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, camDistance));
+
+            Vector3 pos = transform.position;
+            pos.x = topCorner.x;
+            pos.x = pos.x - 1;
+            Instantiate(player, pos, transform.rotation);
+        }
+    }
 
     void Update()
     {
@@ -16,11 +30,6 @@ public class GameInputController : MonoBehaviour
         if (Input.GetButtonDown("Pause"))
         {
             _pause.StopGame();
-        }
-
-        if (GameObject.Find("Player") == null && GameObject.Find("Player(Clone)") == null)
-        {
-            _restart.Respawn();
         }
     }
 }

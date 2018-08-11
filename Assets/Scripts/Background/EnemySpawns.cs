@@ -11,7 +11,7 @@ public class EnemySpawns : MonoBehaviour {
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name != "Title Screen" && SceneManager.GetActiveScene().name != "HowTo1")
+        if (SceneManager.GetActiveScene().name == "1")
         {
             StartCoroutine("Spawning");
         }
