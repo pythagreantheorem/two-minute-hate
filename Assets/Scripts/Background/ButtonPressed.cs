@@ -39,6 +39,6 @@ public class ButtonPressed : MonoBehaviour
     //Shop Menu Buttons
     public void BuyItems()
     {
-        Debug.Log("Bought");
+        GameObject.Find("Shop Runner").GetComponent<ShopActionController>().BuyItems();
     }
 }

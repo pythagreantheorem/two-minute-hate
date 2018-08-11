@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EnemySpawns : MonoBehaviour {
 
-    [SerializeField] float _secsmin;
-    [SerializeField] float _secsmax;
+    [SerializeField] public float _secsmin;
+    [SerializeField] public float _secsmax;
     [SerializeField] GameObject enemy;
 
     private void Start()

@@ -7,6 +7,7 @@ public class EnemyLives : MonoBehaviour {
     [SerializeField] public int maxLives;
     [SerializeField] private Rigidbody2D _rigidbody;
     [SerializeField] public float maxSpeed;
+    public bool resettrigger;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -37,6 +38,31 @@ public class EnemyLives : MonoBehaviour {
         if (transform.position.x > topCorner.x)
         {
             Destroy(gameObject);
+        }
+
+        if(transform.position.x < bottomCorner.x - 0.25)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    IEnumerator ResetDirectionSpeed()
+    {
+        yield return new WaitForSeconds(1);
+        resettrigger = true;
+        ResetSpeed();
+    }
+
+    public void ResetSpeed()
+    {
+        if(resettrigger)
+        {
+            Debug.Log("reset");
+        }
+        else
+        {
+            Debug.Log("Start coroutine");
+            StartCoroutine("ResetSpeed");
         }
     }
 }

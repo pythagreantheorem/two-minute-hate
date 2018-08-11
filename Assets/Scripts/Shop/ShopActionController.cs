@@ -8,8 +8,20 @@ public class ShopActionController : MonoBehaviour
     private int pricetotal;
     public Text totaldisplayer;
     public Text buytext;
+    public bool gusterbought;
+    [SerializeField] private Dropdown spelldrop;
 
-    public void FindTotal(int index)
+    public void BuyItems()
+    {
+        if (GameObject.Find("LevelRunning").GetComponent<GoldDisplay>().goldamount > 9 && gusterbought == false)
+        {
+            int currentgold = GameObject.Find("LevelRunning").GetComponent<GoldDisplay>().goldamount;
+            GameObject.Find("LevelRunning").GetComponent<GoldDisplay>().goldamount = currentgold - 10;
+            gusterbought = true;
+        }
+    }
+
+    public int FindTotal(int index)
     {
         switch(index)
         {
@@ -17,24 +29,22 @@ public class ShopActionController : MonoBehaviour
                 pricetotal = 0;
                 break;
             case 1:
-                pricetotal = 15;
-                break;
-            case 2:
-                pricetotal = 25;
+                pricetotal = 9;
                 break;
         }
-        DisplayBuyButton();
+        return pricetotal;
     }
 
-    private void DisplayBuyButton()
-    {
-        string totaltemplate = "Total: " + pricetotal;
-        totaldisplayer.text = pricetotal.ToString();
-        Debug.Log(totaldisplayer.text);
-    }
+   // private void DisplayBuyButton()
+   // {
+   //     string totaltemplate = "Total: " + pricetotal;
+   //     totaldisplayer.text = pricetotal.ToString();
+   //     Debug.Log(totaldisplayer.text);
+   // }
 
     private void Start()
     {
         pricetotal = 0;
+        gusterbought = false;
     }
 }

@@ -18,16 +18,12 @@ public class Guster : PlayerSpell
 
         if(other.tag == "Enemy")
         {
-            float enemyspeed = other.GetComponent<EnemyLives>().maxSpeed;
-            enemyspeed = maxSpeed;
-            StartCoroutine("ChangeSpeed");
-            Destroy(gameObject);
+            other.GetComponent<EnemyLives>().maxSpeed = maxSpeed++;
+            //WaitforSeconds not working so this won't be used until solution found
+            //other.GetComponent<EnemyLives>().resettrigger = false;
+            //Debug.Log("here we go");
+            //other.GetComponent<EnemyLives>().ResetSpeed();
         }
-    }
-
-    private IEnumerator ChangeSpeed(System.Action callback)
-    {
-        yield return new WaitForSeconds(1.5f)
     }
 
     private void Update()

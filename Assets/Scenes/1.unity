@@ -152,12 +152,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114403723491573824, guid: bc5504fc526017e488135a7db363c9d3,
+    - target: {fileID: 114343081683271568, guid: bc5504fc526017e488135a7db363c9d3,
         type: 2}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1796129622}
-    - target: {fileID: 114343081683271568, guid: bc5504fc526017e488135a7db363c9d3,
+    - target: {fileID: 114403723491573824, guid: bc5504fc526017e488135a7db363c9d3,
         type: 2}
       propertyPath: canvas
       value: 

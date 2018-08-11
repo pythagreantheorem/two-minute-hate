@@ -453,10 +453,8 @@ MonoBehaviour:
     m_Options:
     - m_Text: Spells
       m_Image: {fileID: 0}
-    - m_Text: Guster
-      m_Image: {fileID: 0}
-    - m_Text: ChargedAttack
-      m_Image: {fileID: 0}
+    - m_Text: Guster (10 gold)
+      m_Image: {fileID: 21300000, guid: 153f6c92efd29e646957820a6e4fcd0d, type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

@@ -113,9 +113,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1ee3abcbc0e914287f92f10a67d54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLives: 2
+  maxLives: 1
   _rigidbody: {fileID: 50843629751657844}
   maxSpeed: 2
+  resettrigger: 0
 --- !u!114 &114691356728392756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a1b4a97eebe744fa24c8baf1c73fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyspwn: {fileID: 0}
   killcount: 0
 --- !u!212 &212541066911579030
 SpriteRenderer:

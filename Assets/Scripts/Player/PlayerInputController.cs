@@ -16,7 +16,10 @@ public class PlayerInputController : MonoBehaviour
 
         if (Input.GetButtonDown("Change Spell"))
         {
-            _actionController.EquipNextSpell();
+            if(GameObject.Find("Shop Runner").GetComponent<ShopActionController>().gusterbought)
+            {
+                _actionController.EquipNextSpell();
+            }
         }
     }
 }

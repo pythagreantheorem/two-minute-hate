@@ -52,9 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c0f2e3fdbea9c4f800d5df6ba3dc0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totaldisplayer: {fileID: 114484109678645820, guid: acf9df5a1aad1864ba52114ae0eae8f5,
+  totaldisplayer: {fileID: 0}
+  buytext: {fileID: 114781359867142822, guid: acf9df5a1aad1864ba52114ae0eae8f5, type: 2}
+  gusterbought: 0
+  spelldrop: {fileID: 114454906788111760, guid: a58642860cca31746ae240ea1c4eae6d,
     type: 2}
-  buytext: {fileID: 114358602604000268, guid: acf9df5a1aad1864ba52114ae0eae8f5, type: 2}
 --- !u!114 &114885634281947166
 MonoBehaviour:
   m_ObjectHideFlags: 1

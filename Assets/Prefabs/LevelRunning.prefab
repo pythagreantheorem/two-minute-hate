@@ -152,7 +152,7 @@ MonoBehaviour:
   exitbutton: {fileID: 1265923826255972, guid: c385728986a67e34bb28a6df215f16e7, type: 2}
   golddisplay: {fileID: 1098163748334614, guid: b6c57d1a383556940834ca8167ed0d56,
     type: 2}
-  buybutton: {fileID: 114824541542434938, guid: acf9df5a1aad1864ba52114ae0eae8f5,
+  buybutton: {fileID: 114739939942771218, guid: acf9df5a1aad1864ba52114ae0eae8f5,
     type: 2}
 --- !u!114 &114687902039840796
 MonoBehaviour:
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a1b4a97eebe744fa24c8baf1c73fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyspwn: {fileID: 114168431467265058}
   killcount: 0
 --- !u!114 &114935663116278324
 MonoBehaviour:

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SwitchingScenes : MonoBehaviour
 {
+    [SerializeField] private EnemySpawns enemyspwn;
     public int killcount;
 
     private void Start()
@@ -20,13 +21,28 @@ public class SwitchingScenes : MonoBehaviour
 
     private void CheckLevelSwitch(int _killcount)
     {
+        int spwnmax = 6;
+        int spwnmin = 3;
+
         switch(_killcount)
         {
             case 5:
-
-                //SceneManager.LoadScene("SampleScene");
-            break;
+                spwnmax--;
+                break;
+            case 10:
+                spwnmin--;
+                break;
+            case 15:
+                spwnmax--;
+                break;
+            case 20:
+                spwnmin--;
+                break;
+            case 25:
+                spwnmax--;
+                break;
         }
-
+        enemyspwn._secsmax = spwnmax;
+        enemyspwn._secsmin = spwnmin;
     }
 }
